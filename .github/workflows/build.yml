@@ -19,3 +19,4 @@ jobs:
         registry: ghcr.io
         tags: latest
         cache: ${{ !contains(github.event.head_commit.message, '#no-cache') }}
+        buildargs: GITHUB_REF_NAME
