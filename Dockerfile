@@ -11,3 +11,5 @@ ARG GITHUB_REF_NAME
 ENV BITCOIND=/usr/local/bin/${GITHUB_REF_NAME}d
 COPY --from=0 /usr/local/bin/* /usr/local/bin/
 CMD $BITCOIND -printtoconsole
+
+LABEL org.opencontainers.image.source=https://github.com/nationalbitcoin/docker-images
